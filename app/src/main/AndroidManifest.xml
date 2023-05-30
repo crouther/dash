@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="works.myles.smeter">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/cluster"
+        android:label="Moto Cluster"
+        android:roundIcon="@mipmap/cluster_round"
+        android:supportsRtl="true"
+        android:theme="@style/FullscreenTheme.NoActionBar"
+        tools:replace="android:label">
+
+        <activity android:name=".tuningChart"/>
+        <activity android:name=".RPMTuning" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".splash">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="works.myles.smeter.splash" />
+        </activity>
+
+        <activity
+            android:name=".splash"
+            android:label="Moto Cluster"
+            android:theme="@style/FullscreenTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Moto Cluster"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme.NoActionBar" />
+
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+</manifest>

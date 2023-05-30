@@ -1,0 +1,30 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:key="notifications_category"
+        app:title="Notifications">
+
+        <SwitchPreferenceCompat
+            app:key="notifications"
+            app:title="Enable message notifications"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="help_category"
+        app:title="Help">
+
+        <EditTextPreference
+            android:key="edittext_preference"
+            android:title="Name Your Bike"
+            android:summary="Year Brand Model CC"
+            android:dialogTitle="Bike Name?" />
+
+        <Preference
+            app:key="feedback"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,89 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:key="function"
+        app:title="Gauges">
+
+        <Preference
+            android:summary="Tune RPM Readings"
+            android:title="Calibration">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="works.myles.smeter.RPMTuning"
+                android:targetPackage="works.myles.smeter" />
+        </Preference>
+
+        <SwitchPreferenceCompat
+            app:key="MPHKmHr"
+            app:title="MPH or Km/Hr"
+            app:summary="Turn on for Metric (Km/Hr)"/>
+
+        <SwitchPreferenceCompat
+            app:key="portrait"
+            app:title="Portrait Lock"
+            app:summary="Enable for Portrait Mode"/>
+
+        <SwitchPreferenceCompat
+            app:key="F2C"
+            app:title="Fahrenheit or Celsius"
+            app:summary="Enable for Celsius"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="help_category"
+        app:title="Help">
+
+        <EditTextPreference
+            android:key="motoName"
+            android:title="Name Your Bike"
+            android:summary="Bike Name"
+            android:dialogTitle="Year, Brand, Model, CC"
+            android:inputType="text" />
+
+        <SwitchPreferenceCompat
+            app:key="logs"
+            app:title="Share data &amp; usage statics"/>
+
+        <Preference
+            app:key="feedback"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback"/>
+
+        <Preference android:title="Portfolio" >
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://myles.works" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="visuals"
+        app:title="Visuals">
+
+        <SwitchPreferenceCompat
+            app:key="notifications"
+            app:title="Enable notification visibility"/>
+
+        <SwitchPreferenceCompat
+            app:key="showRPM"
+            app:title="Show RPM"
+            android:defaultValue="true"
+            app:summary="Adjust visual text output"/>
+
+        <SwitchPreferenceCompat
+            app:key="showMPHKMHr"
+            app:title="Show MPH / Km/Hr"
+            android:defaultValue="true"
+            app:summary="Adjust visual text output"/>
+
+        <SwitchPreferenceCompat
+            app:key="showSensors"
+            app:title="Show Sensor Arrays"
+            android:defaultValue="true"
+            app:summary="Adjust sensor array display pyramids"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

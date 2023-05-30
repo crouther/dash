@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/rpm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="100dp"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/_0_rpm"
+        android:textColor="#d40000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/speed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="90dp"
+        android:keepScreenOn="true"
+        android:text="@string/intial_speed"
+        android:textColor="#d40000"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/clustercontainer">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:alpha="0.3"
+            app:srcCompat="@drawable/logosq" />
+
+        <!-- RPM Metrics -->
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/RpmCircle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/rpmframe" />
+
+            <ImageView
+                android:id="@+id/rpmLines"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:paddingLeft="15dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/rpms" />
+
+            <ImageView
+                android:id="@+id/rpmDial"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:rotation="70"
+                app:srcCompat="@drawable/rpmsdial" />
+
+        </FrameLayout>
+
+        <!-- Speed Metrics -->
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right">
+
+            <ImageView
+                android:id="@+id/speedCircle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/speedsframe" />
+
+            <ImageView
+                android:id="@+id/speedLines"
+                android:layout_width="217.5dp"
+                android:layout_height="217.5dp"
+                android:paddingRight="12.5dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/speeds" />
+
+            <ImageView
+                android:id="@+id/speedDial"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:rotation="-160"
+                app:srcCompat="@drawable/speedsdial" />
+
+        </FrameLayout>
+
+        <!-- Top Pyramid -->
+        <LinearLayout
+            android:id="@+id/tp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/topPyramid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/toppyramid" />
+
+        </LinearLayout>
+
+        <!-- Bottom Pyramid -->
+        <LinearLayout
+            android:id="@+id/bp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:id="@+id/bottomPyramid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/bottompyramid" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

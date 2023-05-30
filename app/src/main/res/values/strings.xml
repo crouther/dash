@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">smeter</string>
+    <string name="intial_speed">0.0 mph</string>
+    <string name="_0_rpm">0 rpm</string>
+    <string name="moto_cluster">Moto Cluster</string>
+    <string name="settings">Settings</string>
+    <string name="start">Start</string>
+
+    <string name="title_activity_splash">splash</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string-array name="rpm_array">
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+    </string-array>
+
+</resources>

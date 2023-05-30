@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".RPMTuning">
+
+    <TextView
+        android:id="@+id/readOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="Tap the Frequency"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineVert"
+        app:layout_constraintRight_toRightOf="@id/guidelineVert" />
+
+    <TextView
+        android:id="@+id/txtVw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/readOut"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVert"
+        android:text="Revolutions (Hz):"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/rpmSpinner"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/readOut"
+        app:layout_constraintLeft_toRightOf="@id/guidelineVert" />
+
+    <ImageView
+        android:id="@+id/rpmFrameCali"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/rpmframe" />
+
+    <ImageView
+        android:id="@+id/rpmLinesCali"
+        android:layout_width="275dp"
+        android:layout_height="275dp"
+        app:srcCompat="@drawable/rpms"
+        android:paddingLeft="21dp"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorzi"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorzi"
+        app:layout_constraintRight_toRightOf="@id/guidelineVert"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineVert"/>
+
+    <ImageView
+        android:id="@+id/rpmDial"
+        android:layout_width="200dp"
+        android:layout_height="230dp"
+        app:srcCompat="@drawable/rpmsdial"
+        android:paddingTop="60dp"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorzi"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorzi"
+        app:layout_constraintRight_toRightOf="@id/guidelineVert"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineVert" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/rpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:text="---- Hz"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guidelineVert" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4FCC80"
+        android:text="DONE"
+        android:onClick="charts"
+        android:layout_marginBottom="45dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineVert"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
